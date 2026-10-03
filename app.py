@@ -64,7 +64,7 @@ if st.button("Realizar Predicción"):
         st.dataframe(df_procesado)
         
         # 4. Predicción con 'bagging_model.joblib'
-        model = joblib.load('bagging_model.joblib')
+        model = joblib.load('bagging_optimizado.joblib')
         prediccion = model.predict(df_procesado)
         
         st.success(f"La predicción del modelo (Nota Final Estimada) es: {prediccion[0]:.4f}")
